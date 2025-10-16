@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.gameSection {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLZ5EDJkjv0e6CJEj9JcPYGabPnivDFYN3GQ&s);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px;
+  height: 100vh;
+}
+.header-section {
+  border: none;
+  color: yellow;
+  background-color: black;
+  font-size: 50px;
+  font-family: Play, sans-serif;
+  padding: 1rem;
+  border-radius: 20px;
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation-name: movetop;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes movetop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.buttonSection {
+  margin: 30px auto;
+}
+.First-button {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  color: #333;
+}
+.rock {
+  cursor: pointer;
+  border: none;
+  color: darkgrey;
+  font-size: 50px;
+  background-color: blue;
+  padding: 1rem;
+  border-radius: 20px;
+  animation-name: moveright;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes moveright {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+.paper {
+  cursor: pointer;
+  border: none;
+  color: darkgrey;
+  font-size: 50px;
+  background-color: blue;
+  padding: 1rem;
+  border-radius: 20px;
+  animation-name: moveleft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes moveleft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+.second-button {
+  display: flex;
+  justify-content: center;
+  color: #333;
+  border: none;
+}
+.scissors {
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem;
+  font-size: 50px;
+  background-color: blue;
+  color: darkgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: moveScissors;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes moveScissors {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  80% {
+    transform: translate(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.third-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.reset {
+  margin-top: 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 5rem;
+  font-size: 50px;
+  color: darkgrey;
+  font-family: Inter;
+  background-color: white;
+  animation-name: moveScissors;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.rock:active {
+  transform: translateY(-5px);
+  transform: translateY(5px);
+}
+.paper:active {
+  transform: translateY(-5px);
+  transform: translateY(5px);
+}
+.scissors:active {
+  transform: translateY(-5px);
+  transform: translateY(5px);
+}
+.reset:active {
+  transform: translateY(-5px);
+  transform: translateY(5px);
+}
+.gameResult {
+  margin-top: 50px;
+  position: relative;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 400px;
+  font-family: monospace;
+}
+.userMove {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.userResult {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+@media (max-width: 400px) {
+  .First-button {
+    gap: 50px;
+  }
+  .rock {
+    font-size: 25px;
+  }
+  .paper {
+    font-size: 25px;
+  }
+  .scissors {
+    font-size: 25px;
+  }
+  .reset {
+    font-size: 25px;
+  }
+  .gameResult {
+    padding: 20px;
+  }
+}
